@@ -37,8 +37,7 @@ const translations = {
         act3Desc: 'Intensive workshop on computational text analysis methods for literary studies',
         act4Title: 'Digital Archives Workshop',
         act4Desc: 'Hands-on training in digital preservation techniques and metadata management'
-    },    ar: {
-        name: 'د. ميلان',
+    },    ar: {        name: 'د. مـيـلان',
         about: 'نبذة عني',
         publications: 'المنشورات',
         projects: 'المشاريع',

@@ -15,6 +15,12 @@
     font-family: var(--font-arabic);
 }
 
+[lang="ar"] .name-text {
+    letter-spacing: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
 [lang="ar"] .nav-list {
     flex-direction: row-reverse;
 }
@@ -173,7 +179,7 @@ body::before {
 
 .name-text {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--color-accent);
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -183,7 +189,7 @@ body::before {
 
 .title-text {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: var(--color-text);
     text-transform: uppercase;
     position: relative;
@@ -201,7 +207,7 @@ body::before {
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-top: 1rem;
     color: var(--color-accent);
 }
@@ -211,13 +217,15 @@ body::before {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
 }
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--color-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
 }
 
@@ -237,6 +245,8 @@ body::before {
     border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(8px);
+    font-size: 1.15rem;
+    line-height: 1.6;
 }
 
 .publication-card:hover,
@@ -310,6 +320,13 @@ body::before {
 
     .section {
         padding: 3rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    .publication-card,
+    .project-card,
+    .activity-card {
+        font-size: 1.1rem;
     }
 
     .content-grid {
