@@ -1,12 +1,64 @@
 :root {
-    --color-background: #f5f1e6;
-    --color-text: #2c1810;
-    --color-primary: #8b7355;
-    --color-secondary: #d4c5b1;
-    --color-accent: #946b54;
-    --color-card-bg: rgba(245, 241, 230, 0.9);
+    --color-background: #e5ebe1;
+    --color-text: #1c2419;
+    --color-primary: #5a7355;
+    --color-secondary: #9ab5a0;
+    --color-accent: #4a634f;
+    --color-card-bg: rgba(229, 235, 225, 0.95);
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Share Tech Mono', monospace;
+    --font-arabic: 'Noto Naskh Arabic', serif;
+}
+
+[lang="ar"] {
+    direction: rtl;
+    font-family: var(--font-arabic);
+}
+
+[lang="ar"] .nav-list {
+    flex-direction: row-reverse;
+}
+
+.language-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-primary);
+    color: var(--color-background);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+}
+
+[lang="ar"] .language-toggle {
+    left: 1rem;
+    right: auto;
+}
+
+[lang="ar"] .tag {
+    font-family: var(--font-arabic);
+}
+
+[lang="ar"] .publication-card,
+[lang="ar"] .project-card,
+[lang="ar"] .activity-card {
+    text-align: right;
+}
+
+[lang="ar"] .tags {
+    justify-content: flex-end;
+}
+
+[lang="ar"] .social-links {
+    flex-direction: row-reverse;
+}
+
+.language-toggle:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
 }
 
 body {
@@ -15,13 +67,14 @@ body {
     font-family: var(--font-body);
     min-height: 100vh;
     position: relative;
+    transition: opacity 0.2s ease;
 }
 
 /* Navigation */
 .header {
     position: fixed;
     top: 0;
-    width: 100%;    background: rgba(245, 241, 230, 0.9);
+    width: 100%;    background: rgba(229, 235, 225, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid var(--color-primary);
@@ -62,6 +115,11 @@ body {
     transition: width 0.3s ease;
 }
 
+[lang="ar"] .nav-link::after {
+    left: auto;
+    right: 0;
+}
+
 .nav-link:hover::after {
     width: 100%;
 }
@@ -88,8 +146,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;    background: linear-gradient(
-        rgba(245, 241, 230, 0.85), 
-        rgba(245, 241, 230, 0.7)
+        rgba(229, 235, 225, 0.88), 
+        rgba(229, 235, 225, 0.75)
     );
     z-index: 1;
 }
